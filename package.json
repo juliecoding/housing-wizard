@@ -1,0 +1,26 @@
+{
+  "name": "housing-wizard",
+  "version": "1.0.0",
+  "description": "An app that allows users to create real estate listings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliecoding/housing-wizard.git"
+  },
+  "author": "juliecoding",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliecoding/housing-wizard/issues"
+  },
+  "homepage": "https://github.com/juliecoding/housing-wizard#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "massive": "^4.4.0"
+  }
+}
