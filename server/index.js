@@ -26,6 +26,7 @@ app.use( session({
   cookie: { maxAge: 10000 }
 }));
 app.use( ( req, res, next ) => createInitialSession( req, res, next ) );
+app.use(express.static('../front/build'));
 
 //Connecting the db
 massive( process.env.CONNECTION_STRING ).then( dbInstance => app.set('db', dbInstance) );

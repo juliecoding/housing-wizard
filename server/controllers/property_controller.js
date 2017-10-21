@@ -1,8 +1,9 @@
 module.exports = {
   getAllProperties: function(req, res, next) {
+    console.log(req.session.user);
     const dbInstance = req.app.get('db');
-    dbInstance.getAllProperties([req.session.user.id])
-    .then(properties => { res.status(200).send(properties) })
+    dbInstance.getAllProperties(req.session.user.id)
+    .then(properties => { console.log(properties); res.status(200).send(properties) })
   },
 
   getFilteredProperties: function(req, res, next) {

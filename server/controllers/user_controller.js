@@ -16,7 +16,9 @@ module.exports = {
     const dbInstance = req.app.get('db');
     dbInstance.login([req.body.username, req.body.password])
     .then(response => {
-      req.session.user = response;
+      console.log("FROM THE LOGIN FUNCTION", response);
+      req.session.user = response[0];
+      console.log("HERE'S YOUR USER", req.session.user);
       res.status(200).send(response);
     })
     .catch(err => {
